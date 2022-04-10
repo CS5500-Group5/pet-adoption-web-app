@@ -1,5 +1,5 @@
 {
-  "name": "GoFresh",
+  "name": "petAdopter",
   "type": "module",
   "version": "1.0.0",
   "description": "Ecommerce website selling Fresh products",
@@ -26,7 +26,6 @@
     "express-async-handler": "^1.1.4",
     "jquery": "^3.6.0",
     "jsonwebtoken": "^8.5.1",
-    "mailgun-js": "^0.22.0",
     "mongoose": "^5.10.7",
     "multer": "^1.4.2",
     "react": "^17.0.2",

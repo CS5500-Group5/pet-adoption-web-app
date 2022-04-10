@@ -11,7 +11,7 @@ export const find = (shelterFilter, nameFilter, speciesFilter, priceFilter, rati
         ...speciesFilter,
         ...priceFilter,
         ...ratingFilter,
-    }).populate('shelter', 'shelter.name shelter.logo')
+    }).collation({locale: "en", strength: 2}).populate('shelter', 'shelter.name shelter.logo')
         .sort(sortApplication)
         .skip(pageSize * (page - 1))
         .limit(pageSize);

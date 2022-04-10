@@ -1,5 +1,4 @@
 import jwt from 'jsonwebtoken';
-import mg from 'mailgun-js';
 
 export const generateToken = (user) => {
   return jwt.sign(
@@ -59,14 +58,9 @@ export const isShelterOrAdmin = (req, res, next) => {
   }
 };
 
-export const mailgun = () =>
-  mg({
-    apiKey: process.env.MAILGUN_API_KEY,
-    domain: process.env.MAILGUN_DOMIAN,
-  });
 
 export const payApplicationEmailTemplate = (application) => {
-  return `<h1>Thanks for shopping with us</h1>
+  return `<h1>Pet Adoption Application Submission</h1>
   <p>
   Hi ${application.user.name},</p>
   <p>We have finished processing your application.</p>

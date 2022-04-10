@@ -8,6 +8,7 @@ import {countNum, createNew, find, findById, findspecies, justFindById} from "./
 
 const petRouter = express.Router();
 
+
 petRouter.get(
   '/',
   expressAsyncHandler(async (req, res) => {

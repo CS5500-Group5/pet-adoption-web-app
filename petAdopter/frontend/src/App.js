@@ -18,7 +18,7 @@ import ShippingAddressScreen from "./screens/ApplicantAddressScreen";
 import SigninScreen from "./screens/SigninScreen";
 import petEditScreen from "./screens/PetEditScreen";
 import ApplicationListScreen from "./screens/ApplicationListScreen";
-import UserListScreen from "./screens/UserListScreen";
+
 import UserEditScreen from "./screens/UserEditScreen";
 import ShelterRoute from "./components/ShelterRoute";
 import shelterScreen from "./screens/ShelterScreen";
@@ -28,7 +28,6 @@ import { ListPetSpecies } from "./actions/petActions";
 import LoadingBox from "./components/LoadingBox";
 import MessageBox from "./components/MessageBox";
 import MapScreen from "./screens/MapScreen";
-import DashboardScreen from "./screens/DashboardScreen";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 function App() {
@@ -265,10 +264,10 @@ function App() {
                 component={PetListScreen}
                 exact
               />
-              <AdminRoute path="/userlist" component={UserListScreen} />
+              
               <AdminRoute path="/user/:id/edit" component={UserEditScreen} />
 
-              <AdminRoute path="/dashboard" component={DashboardScreen} />
+             
 
               <ShelterRoute
                 path="/petlist/shelter"

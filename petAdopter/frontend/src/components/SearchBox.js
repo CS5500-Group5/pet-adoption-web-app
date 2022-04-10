@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
+
 const SearchBox = (props) => {
-  const [name, setName] = useState("");
+  const [species, setSpecies] = useState("");
   const submitHandler = (e) => {
-    console.log(`/search/name/${name}`);
+    console.log(`/search/species/${species}`);
     e.preventDefault();
-    props.history.push(`/search/name/${name}`);
+    props.history.push(`/search/species/${species}`);
   };
   return (
     <form className="search d-flex " onSubmit={submitHandler}>
@@ -15,7 +16,7 @@ const SearchBox = (props) => {
         name="q"
         id="q"
         placeholder="Search Kitten. Doggy. etc."
-        onChange={(e) => setName(e.target.value)}
+        onChange={(e) => setSpecies(e.target.value)}
       />
       <button className="btn btn-secondary fas fa-search" type="submit" />
     </form>
