@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { saveShippingAddress } from "../actions/cartActions";
+import { saveApplicantAddress } from "../actions/cartActions";
 import CheckoutSteps from "../components/CheckoutSteps";
 
-export default function ShippingAddressScreen(props) {
+export default function ApplicantAddressScreen(props) {
   const userSignin = useSelector((state) => state.userSignin);
 
   const { userInfo } = userSignin;
@@ -37,7 +37,7 @@ export default function ShippingAddressScreen(props) {
 
     if (moveOn) {
       dispatch(
-        saveShippingAddress({
+        saveApplicantAddress({
           fullName,
           address,
           city,
@@ -52,7 +52,7 @@ export default function ShippingAddressScreen(props) {
   };
   const chooseOnMap = () => {
     dispatch(
-      saveShippingAddress({
+      saveApplicantAddress({
         fullName,
         address,
         city,
@@ -70,7 +70,7 @@ export default function ShippingAddressScreen(props) {
       <CheckoutSteps step1 step2 />
       <form className="form" onSubmit={submitHandler}>
         <div>
-          <h1>Shipping Address</h1>
+          <h1>Contact Address</h1>
         </div>
         <div>
           <label htmlFor="fullName">Full Name</label>

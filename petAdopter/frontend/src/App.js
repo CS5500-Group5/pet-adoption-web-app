@@ -14,7 +14,7 @@ import PetListScreen from "./screens/PetListScreen";
 import petScreen from "./screens/PetScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import RegisterScreen from "./screens/RegisterScreen";
-import ShippingAddressScreen from "./screens/ApplicantAddressScreen";
+import ApplicantAddressScreen from "./screens/ApplicantAddressScreen";
 import SigninScreen from "./screens/SigninScreen";
 import petEditScreen from "./screens/PetEditScreen";
 import ApplicationListScreen from "./screens/ApplicationListScreen";
@@ -227,7 +227,7 @@ function App() {
               />
               <Route path="/signin" component={SigninScreen} />
               <Route path="/register" component={RegisterScreen} />
-              <Route path="/shipping" component={ShippingAddressScreen} />
+              <Route path="/contact" component={ApplicantAddressScreen} />
               <Route path="/payment" component={PaymentMethodScreen} />
               <Route path="/placeapplication" component={PlaceApplicationScreen} />
               <Route path="/application/:id" component={ApplicationScreen} />

@@ -95,8 +95,8 @@ export const payApplicationEmailTemplate = (application) => {
   <td align="right"> $${application.taxPrice.toFixed(2)}</td>
   </tr>
   <tr>
-  <td colspan="2">Shipping Price:</td>
-  <td align="right"> $${application.shippingPrice.toFixed(2)}</td>
+  <td colspan="2">Contact Price:</td>
+  <td align="right"> $${application.contactPrice.toFixed(2)}</td>
   </tr>
   <tr>
   <td colspan="2"><strong>Total Price:</strong></td>
@@ -107,7 +107,7 @@ export const payApplicationEmailTemplate = (application) => {
   <td align="right">${application.paymentMethod}</td>
   </tr>
   </table>
-  <h2>Shipping address</h2>
+  <h2>Contact address</h2>
   <p>
   ${application.applicantAddress.fullName},<br/>
   ${application.applicantAddress.address},<br/>

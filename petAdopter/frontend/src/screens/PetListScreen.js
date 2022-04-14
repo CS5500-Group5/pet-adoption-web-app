@@ -95,9 +95,7 @@ const PetListScreen = (props) => {
             <tr>
               <th>ID</th>
               <th>NAME</th>
-              <th>PRICE</th>
               <th>species</th>
-              <th>BRAND</th>
               <th>ACTIONS</th>
             </tr>
           </thead>
@@ -111,9 +109,8 @@ const PetListScreen = (props) => {
                   )}
                 </td>
                 <td>{pet.name.substring(0, pet._id.length - 15)}</td>
-                <td>{pet.price}</td>
                 <td>{pet.species}</td>
-                <td>{pet.brand}</td>
+                
                 <td>
                   <button
                     type="button"

@@ -19,9 +19,9 @@ const PlaceApplicationScreen = (props) => {
     cart.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
   );
   cart.shelter = cart.cartItems[0].shelter;
-  cart.shippingPrice = cart.itemsPrice > 100 ? toPrice(0) : toPrice(10);
+  cart.contactPrice = cart.itemsPrice > 100 ? toPrice(0) : toPrice(10);
   cart.taxPrice = toPrice(0.15 * cart.itemsPrice);
-  cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
+  cart.totalPrice = cart.itemsPrice + cart.contactPrice + cart.taxPrice;
   const dispatch = useDispatch();
   const placeApplicationHandler = () => {
     dispatch(createApplication({ ...cart, petItems: cart.cartItems }));

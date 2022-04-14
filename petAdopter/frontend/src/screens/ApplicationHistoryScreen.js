@@ -37,7 +37,6 @@ const ApplicationHistoryScreen = (props) => {
                   {application._id.substring(application._id.length - 5, application._id.length)}
                 </td>
                 <td>{application.createdAt.substring(0, 10)}</td>
-                {/* <td>{application.totalPrice.toFixed(2)}</td> */}
                 <td>{application.petItems[0].name}</td>
                 <td>
                 <td>{application.petItems[0].age}</td>

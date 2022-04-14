@@ -9,7 +9,7 @@ import LoadingBox from "../components/LoadingBox";
 import Axios from "axios";
 import { USER_ADDRESS_MAP_CONFIRM } from "../constants/userConstants";
 import { useDispatch } from "react-redux";
-import { saveShippingAddress } from "../actions/cartActions";
+import { saveApplicantAddress } from "../actions/cartActions";
 
 const libs = ["places"];
 const defaultLocation = { lat: 45.516, lng: -73.56 };
@@ -73,7 +73,7 @@ const MapScreen = (props) => {
       );
       country = myAddress[3];
       dispatch(
-        saveShippingAddress({
+        saveApplicantAddress({
           fullName,
           address: myAddress[0],
           city,
@@ -84,7 +84,7 @@ const MapScreen = (props) => {
         })
       );
       alert("location selected successfully.");
-      props.history.push("/shipping");
+      props.history.push("/contact");
     } else {
       alert("Please enter your address");
     }

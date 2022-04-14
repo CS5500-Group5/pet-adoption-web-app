@@ -8,7 +8,7 @@ const PaymentMethodScreen = (props) => {
   console.log(cart);
   const { applicantAddress } = cart;
   if (!applicantAddress.address) {
-    props.history.push("/shipping");
+    props.history.push("/contact");
   }
   const [paymentMethod, setPaymentMethod] = useState("Cash");
   const dispatch = useDispatch();

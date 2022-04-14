@@ -244,9 +244,7 @@ img.large {
 .card-body > * {
   margin-bottom: 0.5rem;
 }
-.price {
-  font-size: 2rem;
-}
+
 
 .card-bg-light {
   background-color: #FCF1D8;
@@ -639,7 +637,7 @@ body{
 .pet-block .pet-deatil p.price-container span,
 .pet-content .pet-deatil p.price-container span,
 .pet-entry .pet-deatil p.price-container span,
-.shipping table tbody tr td p.price-container span,
+.contact table tbody tr td p.price-container span,
 .shopping-items table tbody tr td p.price-container span {
   font-family: Lato, sans-serif;
   font-size: 24px;
