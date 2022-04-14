@@ -9,11 +9,15 @@ import { PET_UPDATE_RESET } from "../constants/petConstants";
 const PetEditScreen = (props) => {
   const petId = props.match.params.id;
   const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
+  const [breed, setBreed] = useState("");
+  const [activity_level, setActivity_level] = useState("");
+  const [grooming_requirement, setGrooming_requirement] = useState("");
   const [image, setImage] = useState("");
   const [species, setspecies] = useState("");
-  const [countInStock, setCountInStock] = useState("");
-  const [brand, setBrand] = useState("");
+  const [age, setAge] = useState("");
+  const [gender, setGender] = useState("");
+  const [color, setColor] = useState("");
+  const [weight, setWeight] = useState("");
   const [description, setDescription] = useState("");
 
   const petDetails = useSelector((state) => state.petDetails);
@@ -36,11 +40,15 @@ const PetEditScreen = (props) => {
       dispatch(detailspet(petId));
     } else {
       setName(pet.name);
-      setPrice(pet.price);
+      setBreed(pet.breed);
+      setActivity_level(pet.activity_level);
+      setGrooming_requirement(pet.grooming_requirement);
       setImage(pet.image);
       setspecies(pet.species);
-      setCountInStock(pet.countInStock);
-      setBrand(pet.brand);
+      setAge(pet.age);
+      setGender(pet.gender);
+      setColor(pet.color);
+      setWeight(pet.weight);
       setDescription(pet.description);
     }
   }, [pet, dispatch, petId, successUpdate, props.history]);
@@ -51,11 +59,15 @@ const PetEditScreen = (props) => {
       updatepet({
         _id: petId,
         name,
-        price,
+        breed,
+        activity_level,
+        grooming_requirement,
         image,
         species,
-        brand,
-        countInStock,
+        gender,
+        age,
+        color,
+        weight,
         description,
       })
     );
@@ -110,15 +122,39 @@ const PetEditScreen = (props) => {
               />
             </div>
             <div>
-              <label htmlFor="price">Price</label>
+              <label htmlFor="breed">Breed</label>
               <input
-                id="price"
+                id="breed"
                 type="text"
-                placeholder="Enter price"
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
+                placeholder="Enter"
+                value={breed}
+                onChange={(e) => setBreed(e.target.value)}
               />
             </div>
+
+            <div>
+              <label htmlFor="activity_level">Activity Level</label>
+              <input
+                id="activity_level"
+                type="text"
+                placeholder="Enter"
+                value={activity_level}
+                onChange={(e) => setActivity_level(e.target.value)}
+              />
+            </div> 
+
+            <div>
+              <label htmlFor="grooming_requirement">Grooming requirement</label>
+              <input
+                id="grooming_requirement"
+                type="text"
+                placeholder="Enter "
+                value={grooming_requirement}
+                onChange={(e) => setGrooming_requirement(e.target.value)}
+              />
+            </div>
+
+
             <div>
               <label htmlFor="image">Image</label>
               <input
@@ -143,7 +179,7 @@ const PetEditScreen = (props) => {
               )}
             </div>
             <div>
-              <label htmlFor="species">species</label>
+              <label htmlFor="species">Species</label>
               <input
                 id="species"
                 type="text"
@@ -153,25 +189,49 @@ const PetEditScreen = (props) => {
               />
             </div>
             <div>
-              <label htmlFor="brand">Brand</label>
+              <label htmlFor="gender">Gender</label>
               <input
-                id="brand"
+                id="gender"
                 type="text"
-                placeholder="Enter brand"
-                value={brand}
-                onChange={(e) => setBrand(e.target.value)}
+                placeholder="Enter gender"
+                value={gender}
+                onChange={(e) => setGender(e.target.value)}
               />
             </div>
             <div>
-              <label htmlFor="countInStock">Count In Stock</label>
+              <label htmlFor="age">Age</label>
               <input
-                id="countInStock"
+                id="age"
                 type="text"
-                placeholder="Enter countInStock"
-                value={countInStock}
-                onChange={(e) => setCountInStock(e.target.value)}
+                placeholder="Enter age"
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
               />
             </div>
+
+            <div>
+              <label htmlFor="color">Color</label>
+              <input
+                id="color"
+                type="text"
+                placeholder="Enter color"
+                value={color}
+                onChange={(e) => setColor(e.target.value)}
+              />
+            </div>
+              
+            <div>
+              <label htmlFor="weight">Weight(in kg)</label>
+              <input
+                id="weight"
+                type="text"
+                placeholder="Enter weight"
+                value={weight}
+                onChange={(e) => setWeight(e.target.value)}
+              />
+            </div>
+
+
             <div>
               <label htmlFor="description">Description</label>
               <textarea

@@ -72,7 +72,7 @@ function App() {
             >
               <Container className="ms-0 ps-0">
                 <Navbar.Brand href="/" className={"go-fresh"}>
-                <i class="fas fa-paw"></i>
+                <i className="fas fa-paw"></i>
                    Pet Adoption
                 </Navbar.Brand>
                 <Navbar.Toggle

@@ -16,6 +16,13 @@ petRouter.get(
     const page = Number(req.query.pageNumber) || 1;
     const name = req.query.name || '';
     const species = req.query.species || '';
+    const breed = req.query.breed || '';
+    const activity_level = req.query.activity_level || '';
+    const grooming_requirement = req.query.grooming_requirement || '';
+    const age = req.query.age || '';
+    const gender = req.query.gender || '';
+    const color = req.query.color || '';
+    const weight = req.query.weight || '';
     const shelter = req.query.shelter || '';
     const application = req.query.application || '';
     const min =
@@ -117,6 +124,13 @@ petRouter.put(
       pet.brand = req.body.brand;
       pet.countInStock = req.body.countInStock;
       pet.description = req.body.description;
+      pet.breed = req.body.breed;
+      pet.activity_level = req.body.activity_level;
+      pet.grooming_requirement = req.body.grooming_requirement;
+      pet.age = req.body.age;
+      pet.gender = req.body.gender;
+      pet.color = req.body.color;
+      pet.weight = req.body.weight;
       const updatedpet = await pet.save();
       res.send({ message: 'pet Updated', pet: updatedpet });
     } else {
