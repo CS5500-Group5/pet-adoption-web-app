@@ -11,3 +11,7 @@
 
 ## Heroku
 **https://pet-adoption-web-app.herokuapp.com/**
+
+
+## QA document
+**https://docs.google.com/document/d/1JflEOLMExg_kLF363y-VsaoRj_Rho9cThscgxVd1gK4**
