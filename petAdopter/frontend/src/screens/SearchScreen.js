@@ -6,7 +6,6 @@ import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import Pet from "../components/Pet";
 import Rating from "../components/Rating";
-// import { prices, ratings } from "../utils";
 
 const SearchScreen = (props) => {
 	const {

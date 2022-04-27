@@ -9,7 +9,6 @@ export const find = (shelterFilter, nameFilter, speciesFilter, ratingFilter, sor
 		...shelterFilter,
 		...nameFilter,
 		...speciesFilter,
-		// ...priceFilter,
 		...ratingFilter,
 	}).collation({ locale: "en", strength: 2 }).populate('shelter', 'shelter.name shelter.logo')
 		.sort(sortApplication)
@@ -33,7 +32,6 @@ export const createNew = (myName, myshelter) => {
 		name: 'sample name ' + myName,
 		shelter: myshelter,
 		image: '/images/p1.jpg',
-		// price: 0,
 		species: 'sample species',
 		brand: 'sample brand',
 		countInStock: 0,

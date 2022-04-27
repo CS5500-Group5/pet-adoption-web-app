@@ -23,8 +23,6 @@ const petSchema = mongoose.Schema(
     activity_level: { type: String, required: false },
     grooming_requirement: { type: String, required: false },
     description: { type: String, required: true },
-    // price: { type: Number, required: false },
-    // countInStock: { type: Number, required: false },
     rating: { type: Number, required: true },
     numReviews: { type: Number, required: true },
     reviews: [reviewSchema],

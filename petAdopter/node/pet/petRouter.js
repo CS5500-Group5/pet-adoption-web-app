@@ -37,21 +37,15 @@ petRouter.get(
 		const nameFilter = name ? { name: { $regex: name, $options: 'i' } } : {};
 		const shelterFilter = shelter ? { shelter } : {};
 		const speciesFilter = species ? { species } : {};
-		// const priceFilter = min && max ? { price: { $gte: min, $lte: max } } : {};
 		const ratingFilter = rating ? { rating: { $gte: rating } } : {};
 		const sortApplication =
-			/* application === 'lowest'
-				? { price: 1 }
-				: application === 'highest'
-					? { price: -1 }
-					: */ application === 'toprated'
+			application === 'toprated'
 				? { rating: -1 }
 				: { _id: -1 };
 		const count = await countNum({
 			...shelterFilter,
 			...nameFilter,
 			...speciesFilter,
-			// ...priceFilter,
 			...ratingFilter,
 		});
 		const pets = await find(shelterFilter, nameFilter, speciesFilter, ratingFilter, sortApplication, pageSize, page);
@@ -118,7 +112,6 @@ petRouter.put(
 		const pet = await justFindById(petId);
 		if (pet) {
 			pet.name = req.body.name;
-			pet.price = req.body.price;
 			pet.image = req.body.image;
 			pet.species = req.body.species;
 			pet.brand = req.body.brand;
