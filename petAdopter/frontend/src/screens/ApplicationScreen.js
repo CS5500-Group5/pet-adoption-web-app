@@ -100,14 +100,14 @@ const ApplicationScreen = (props) => {
                 Your contact info. is: {" "}
                 <b>
                   {application.applicantAddress.address}, {application.applicantAddress.city},
-                  {application.applicantAddress.state}, {application.applicantAddress.country} {" "}
+                  {application.applicantAddress.state}, {application.applicantAddress.country}, {" "}
                   {application.applicantAddress.postalCode}
                 </b>
                 , for <b>{application.applicantAddress.fullName}</b>.
                 <br />
                 <br />
                 <spam>
-                  Please wait until your application is reviewed. <b>{application.petItems[0].shelter}</b> Please contact us with any questions.
+                  Please wait until your application is reviewed. Please contact us with any questions.
                 </spam>
               </MessageBox>
             </li>

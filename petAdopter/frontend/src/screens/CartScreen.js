@@ -38,8 +38,8 @@ const CartScreen = (props) => {
         ) : (
           <ul>
             <li className="row mt-5">
-              <div className="col-6">Pet Information</div>
-              <div className="col-4">Shelter Name</div>
+              <div className="col-6 bg-primary text-wrap text-light">Pet Information</div>
+              <div className="col-6 bg-primary text-wrap text-light text-center">Shelter Name and Action</div>
               {/* <div className="col-2-original float-center">Item Total</div> */}
             </li>
 
