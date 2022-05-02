@@ -1,14 +1,16 @@
 import model from './petModel.js';
 
 export const countNum = (filter) => {
-	return model.count(filter);
+	return model.countDocuments(filter);
 }
 
-export const find = (shelterFilter, nameFilter, speciesFilter, ratingFilter, sortApplication, pageSize, page) => {
+export const find = (shelterFilter, nameFilter, speciesFilter, breedFilter, ratingFilter, sortApplication, pageSize, page) => {
+	// console.log(shelterFilter, nameFilter, speciesFilter, breedFilter);
 	return model.find({
+		$or: [ nameFilter, speciesFilter, breedFilter ],
 		...shelterFilter,
-		...nameFilter,
-		...speciesFilter,
+		// ...nameFilter,
+		// ...speciesFilter,
 		...ratingFilter,
 	}).collation({ locale: "en", strength: 2 }).populate('shelter', 'shelter.name shelter.logo')
 		.sort(sortApplication)

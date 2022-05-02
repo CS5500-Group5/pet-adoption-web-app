@@ -12,11 +12,12 @@ const petRouter = express.Router();
 petRouter.get(
 	'/',
 	expressAsyncHandler(async (req, res) => {
+		const text = req.query.species || '';
 		const pageSize = 6;
 		const page = Number(req.query.pageNumber) || 1;
-		const name = req.query.name || '';
-		const species = req.query.species || '';
-		const breed = req.query.breed || '';
+		const name = req.query.name || text;
+		const species = req.query.species || text;
+		const breed = req.query.breed || text;
 		const activity_level = req.query.activity_level || '';
 		const grooming_requirement = req.query.grooming_requirement || '';
 		const age = req.query.age || '';
@@ -36,19 +37,22 @@ petRouter.get(
 
 		const nameFilter = name ? { name: { $regex: name, $options: 'i' } } : {};
 		const shelterFilter = shelter ? { shelter } : {};
-		const speciesFilter = species ? { species } : {};
+		const speciesFilter = species ? { species: { $regex: species, $options: 'i' } } : {};
+		const breedFilter = breed ? { breed: { $regex: breed, $options: 'i' } } : {};
 		const ratingFilter = rating ? { rating: { $gte: rating } } : {};
 		const sortApplication =
 			application === 'toprated'
 				? { rating: -1 }
 				: { _id: -1 };
+
 		const count = await countNum({
+			$or: [ nameFilter, speciesFilter , breedFilter],
 			...shelterFilter,
-			...nameFilter,
-			...speciesFilter,
+			// ...nameFilter,
+			// ...speciesFilter,
 			...ratingFilter,
 		});
-		const pets = await find(shelterFilter, nameFilter, speciesFilter, ratingFilter, sortApplication, pageSize, page);
+		const pets = await find(shelterFilter, nameFilter, speciesFilter, breedFilter, ratingFilter, sortApplication, pageSize, page);
 		res.send({ pets, page, pages: Math.ceil(count / pageSize) });
 	})
 );
