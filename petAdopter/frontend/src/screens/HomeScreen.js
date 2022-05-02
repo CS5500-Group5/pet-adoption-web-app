@@ -67,7 +67,7 @@ const HomeScreen = () => {
             ) : (
               <>
                 {shelters.length === 0 && (
-                  <MessageBox>No shelter Found</MessageBox>
+                  <MessageBox>No Shelter Found</MessageBox>
                 )}
                 <Carousel showArrows autoPlay showThumbs={false}>
                   {shelters.map((shelter) => (
@@ -87,7 +87,7 @@ const HomeScreen = () => {
             )}
             <br />
             <h1>
-              <strong>Recent Added Pets Available</strong>
+              <strong>Recently Added Pets Available</strong>
             </h1>
             {pets.length === 0 && <MessageBox>No pet Found</MessageBox>}
             <div className="row center">

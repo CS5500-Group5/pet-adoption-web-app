@@ -75,7 +75,7 @@ const RegisterScreen = (props) => {
           <input
             type="password"
             id="confirmPassword"
-            placeholder="Enter confirm password"
+            placeholder="Please confirm password"
             required
             onChange={(e) => setConfirmPassword(e.target.value)}
           ></input>

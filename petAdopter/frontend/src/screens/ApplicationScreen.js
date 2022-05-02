@@ -61,11 +61,10 @@ const ApplicationScreen = (props) => {
     <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <div className={"row ms-5 me-5"}>
-      <h1>Thank you for requesting adoption. </h1>
+      <h1>Thank you for submitting an application. </h1>
       <h1>
-        Your Application #
-        {application._id.substring(application._id.length - 5, application._id.length)} has been
-        successfully placed!
+        Please save this ID for your records: #
+        {application._id.substring(application._id.length - 5, application._id.length)}
       </h1>
       <div className="row top">
         <div className="col-2">
@@ -100,15 +99,15 @@ const ApplicationScreen = (props) => {
               <MessageBox variant="warning">
                 Your contact info. is: {" "}
                 <b>
-                  {application.applicantAddress.address}, {application.applicantAddress.city},{" "}
-                  {application.applicantAddress.country}{" "}
+                  {application.applicantAddress.address}, {application.applicantAddress.city},
+                  {application.applicantAddress.state}, {application.applicantAddress.country} {" "}
                   {application.applicantAddress.postalCode}
                 </b>
                 , for <b>{application.applicantAddress.fullName}</b>.
                 <br />
                 <br />
                 <spam>
-                  Please wait until your application be reviewed. <b>{application.petItems[0].shelter}</b>.
+                  Please wait until your application is reviewed. <b>{application.petItems[0].shelter}</b> Please contact us with any questions.
                 </spam>
               </MessageBox>
             </li>
@@ -118,11 +117,11 @@ const ApplicationScreen = (props) => {
           <div className="card-checkout card-body">
             <ul>
               <li>
-                <h2 className="bg-primary text-wrap text-light">Application Reminder</h2>
+                <h2 className="bg-primary text-wrap text-light text-center">Application Reminder</h2>
               </li>
               <li>
-                <p className = "text-danger">When you foster, you agree to take a homeless pet into your home and give him or her love, 
-                  care and attention.</p>
+                <p className = "text-danger">When adopting, you agree to take in your new pet and shower them with unconditional love, 
+                  care, and attention.</p>
               </li>
               
             </ul>

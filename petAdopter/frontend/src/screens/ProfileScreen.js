@@ -109,43 +109,43 @@ const ProfileScreen =() => {
               ></input>
             </div>
             <div>
-              <label htmlFor="confirmPassword">confirm Password</label>
+              <label htmlFor="confirmPassword">Confirm Password</label>
               <input
                 id="confirmPassword"
                 type="password"
-                placeholder="Enter confirm password"
+                placeholder="Please Confirm Password"
                 onChange={(e) => setConfirmPassword(e.target.value)}
               ></input>
             </div>
             {user.isShelter && (
               <>
-                <h2>shelter</h2>
+                <h2>Shelter Information</h2>
                 <div>
-                  <label htmlFor="shelterName">shelter Name</label>
+                  <label htmlFor="shelterName">Shelter Name</label>
                   <input
                     id="shelterName"
                     type="text"
-                    placeholder="Enter shelter Name"
+                    placeholder="Enter Shelter Name"
                     value={shelterName}
                     onChange={(e) => setshelterName(e.target.value)}
                   ></input>
                 </div>
                 <div>
-                  <label htmlFor="shelterLogo">shelter Logo</label>
+                  <label htmlFor="shelterLogo">Shelter Logo</label>
                   <input
                     id="shelterLogo"
                     type="text"
-                    placeholder="Enter shelter Logo"
+                    placeholder="Enter Shelter Logo"
                     value={shelterLogo}
                     onChange={(e) => setshelterLogo(e.target.value)}
                   ></input>
                 </div>
                 <div>
-                  <label htmlFor="shelterDescription">shelter Description</label>
+                  <label htmlFor="shelterDescription">Shelter Description</label>
                   <input
                     id="shelterDescription"
                     type="text"
-                    placeholder="Enter shelter Description"
+                    placeholder="Enter Shelter Description"
                     value={shelterDescription}
                     onChange={(e) => setshelterDescription(e.target.value)}
                   ></input>

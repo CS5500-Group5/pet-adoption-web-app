@@ -93,12 +93,12 @@ const PetScreen = (props) => {
                 {/* <small>&nbsp;*includes tax</small> */}
               </h2>
               <h2 className="breed-container text-primary ps-2">
-              Activity_level:&nbsp;
+              Activity Level:&nbsp;
                 {pet.activity_level}
                 {/* <small>&nbsp;*includes tax</small> */}
               </h2>
               <h2 className="breed-container text-primary ps-2">
-              Grooming requirement:&nbsp;
+              Grooming Requirement:&nbsp;
                 {pet.grooming_requirement}
                 {/* <small>&nbsp;*includes tax</small> */}
               </h2>
@@ -149,14 +149,14 @@ const PetScreen = (props) => {
                 <p className="middle-size">{pet.description}</p>
               </div>
               <hr />
-              <h2 className="text-primary ps-2">I want to adopt this cutie:</h2>
+              <h2 className="text-primary ps-2">I Want to Adopt this Cutie:</h2>
               <span>
                 &nbsp;&nbsp;
                 <a
                   className="btn btn-primary btn-lg mt-0"
                   onClick={addToCartHandler}
                 >
-                  Add to my aoption application <i className="fa fa-heart"></i>
+                  Add to my Adoption Application <i className="fa fa-heart"></i>
                 </a>
               </span>
             </div>
@@ -168,7 +168,7 @@ const PetScreen = (props) => {
               <strong>Reviews</strong>
             </h1>
             {pet.reviews.length === 0 && (
-              <MessageBox variant={"warning"}>There is no review</MessageBox>
+              <MessageBox variant={"warning"}>There are currently no reviews.</MessageBox>
             )}
             <ul>
               {pet.reviews.map((review) => (
@@ -185,7 +185,7 @@ const PetScreen = (props) => {
                 {userInfo ? (
                   <form className="form" onSubmit={submitHandler}>
                     <div>
-                      <h1 className="text-primary">Write a customer review</h1>
+                      <h1 className="text-primary">Have feedback? How was the process?</h1>
                     </div>
                     <div>
                       <label htmlFor="rating">Rating</label>
@@ -199,11 +199,11 @@ const PetScreen = (props) => {
                         <option value="2">2- Fair</option>
                         <option value="3">3- Good</option>
                         <option value="4">4- Very good</option>
-                        <option value="5">5- Excelent</option>
+                        <option value="5">5- Excellent</option>
                       </select>
                     </div>
                     <div>
-                      <label htmlFor="comment">Comment</label>
+                      <label htmlFor="comment">Comments</label>
                       <textarea
                         id="comment"
                         value={comment}

@@ -39,8 +39,8 @@ const PlaceApplicationScreen = (props) => {
 								<p>
 									<strong>Name:</strong> {cart.applicantAddress.fullName} <br />
 									<strong>Address: </strong> {cart.applicantAddress.address},
-									{cart.applicantAddress.city}, {cart.applicantAddress.postalCode}
-									,{cart.applicantAddress.country}
+									{cart.applicantAddress.city}, {cart.applicantAddress.state},
+									{cart.applicantAddress.postalCode}, {cart.applicantAddress.country}
 								</p>
 							</div>
 						</li>
@@ -88,12 +88,12 @@ const PlaceApplicationScreen = (props) => {
 					<div className="card-checkout card-body">
 						<ul>
 							<li>
-								<h2>Application Reminder</h2>
-							</li>
-							<li>
-								<p>When you foster, you agree to take a homeless pet into your home and give him or her love,
-									care and attention..</p>
-							</li>
+                				<h2 className="bg-primary text-wrap text-light text-center">Application Reminder</h2>
+              				</li>
+             				<li>
+                				<p className = "text-danger">When adopting, you agree to take in your new pet and shower them with unconditional love, 
+                  				care, and attention.</p>
+              				</li>
 
 							<li>
 								<button

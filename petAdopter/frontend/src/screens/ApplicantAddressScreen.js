@@ -21,6 +21,7 @@ export default function ApplicantAddressScreen(props) {
   const [fullName, setFullName] = useState(applicantAddress.fullName);
   const [address, setAddress] = useState(applicantAddress.address);
   const [city, setCity] = useState(applicantAddress.city);
+  const [state, setState] = useState(applicantAddress.state);
   const [postalCode, setPostalCode] = useState(applicantAddress.postalCode);
   const [country, setCountry] = useState(applicantAddress.country);
   const dispatch = useDispatch();
@@ -41,6 +42,7 @@ export default function ApplicantAddressScreen(props) {
           fullName,
           address,
           city,
+          state,
           postalCode,
           country,
           lat: newLat,
@@ -56,6 +58,7 @@ export default function ApplicantAddressScreen(props) {
         fullName,
         address,
         city,
+        state,
         postalCode,
         country,
         lat,
@@ -77,7 +80,7 @@ export default function ApplicantAddressScreen(props) {
           <input
             type="text"
             id="fullName"
-            placeholder="Enter full name"
+            placeholder="Enter Full Name"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
             required
@@ -88,7 +91,7 @@ export default function ApplicantAddressScreen(props) {
           <input
             type="text"
             id="address"
-            placeholder="Enter address"
+            placeholder="Enter Address"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
             required
@@ -99,9 +102,20 @@ export default function ApplicantAddressScreen(props) {
           <input
             type="text"
             id="city"
-            placeholder="Enter city"
+            placeholder="Enter City"
             value={city}
             onChange={(e) => setCity(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="state">State</label>
+          <input
+            type="text"
+            id="state"
+            placeholder="Enter State"
+            value={state}
+            onChange={(e) => setState(e.target.value)}
             required
           />
         </div>
@@ -110,7 +124,7 @@ export default function ApplicantAddressScreen(props) {
           <input
             type="text"
             id="postalCode"
-            placeholder="Enter postal code"
+            placeholder="Enter Postal Code"
             value={postalCode}
             onChange={(e) => setPostalCode(e.target.value)}
             required
@@ -121,7 +135,7 @@ export default function ApplicantAddressScreen(props) {
           <input
             type="text"
             id="country"
-            placeholder="Enter country"
+            placeholder="Enter Country"
             value={country}
             onChange={(e) => setCountry(e.target.value)}
             required

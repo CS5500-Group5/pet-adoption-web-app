@@ -101,7 +101,7 @@ const PetEditScreen = (props) => {
     <div>
       <form className="form" onSubmit={submitHandler}>
         <div>
-          <h1>Edit pet {petId}</h1>
+          <h1>Edit Pet Details</h1>
         </div>
         {loadingUpdate && <LoadingBox />}
         {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
@@ -155,7 +155,7 @@ const PetEditScreen = (props) => {
             </div>
 
 
-            <div>
+            {/* <div>
               <label htmlFor="image">Image</label>
               <input
                 id="image"
@@ -164,7 +164,7 @@ const PetEditScreen = (props) => {
                 value={image}
                 onChange={(e) => setImage(e.target.value)}
               />
-            </div>
+            </div> */}
             <div>
               <label htmlFor="imageFile">Image File</label>
               <input

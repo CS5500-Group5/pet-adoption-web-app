@@ -94,6 +94,7 @@ export const payApplicationEmailTemplate = (application) => {
   ${application.applicantAddress.fullName},<br/>
   ${application.applicantAddress.address},<br/>
   ${application.applicantAddress.city},<br/>
+  ${application.applicantAddress.state},<br/>
   ${application.applicantAddress.country},<br/>
   ${application.applicantAddress.postalCode}<br/>
   </p>

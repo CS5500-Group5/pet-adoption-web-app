@@ -13,7 +13,7 @@ const ApplicationHistoryScreen = (props) => {
   }, [dispatch]);
   return (
     <div className={"row"}>
-      <h1>Applications</h1>
+      <h1>Pending Applications</h1>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
@@ -22,12 +22,12 @@ const ApplicationHistoryScreen = (props) => {
         <table className="table table-hover application-table ">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>DATE</th>
-              <th>PET</th>
-              <th>SHELTER</th>
-              <th>DETAIL</th>
-              <th>APPROVED</th>
+              <th>Application ID</th>
+              <th>Date Submitted</th>
+              <th>Pet</th>
+              <th>Shelter</th>
+              <th>Details</th>
+              <th>Approved</th>
             </tr>
           </thead>
           <tbody>
@@ -52,7 +52,7 @@ const ApplicationHistoryScreen = (props) => {
                     Details
                   </button>
                 </td>
-                <td>{application.isApproved ? "YES": "NO"}</td>
+                <td>{application.isApproved ? "Yes": "No"}</td>
               </tr>
             ))}
           </tbody>
