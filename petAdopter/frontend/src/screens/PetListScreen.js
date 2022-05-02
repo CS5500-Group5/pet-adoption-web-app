@@ -70,13 +70,13 @@ const PetListScreen = (props) => {
   return (
     <div>
       <div className="row">
-        <h1>pets</h1>
+        <h1>Pets</h1>
         <button
           type="button"
           className="btn btn-primary btn-lg"
           onClick={createHandler}
         >
-          Create pet
+          Create Pet
         </button>
       </div>
 
@@ -94,9 +94,9 @@ const PetListScreen = (props) => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>NAME</th>
-              <th>species</th>
-              <th>ACTIONS</th>
+              <th>Name</th>
+              <th>Species</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>

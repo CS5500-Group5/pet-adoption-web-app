@@ -122,7 +122,7 @@ function App() {
                     )}
                     {userInfo && userInfo.isShelter && (
                       <NavDropdown
-                        title="shelter"
+                        title="Shelter"
                         id="shelter-dropdown"
                         className={"navi-level-one"}
                       >
@@ -130,7 +130,7 @@ function App() {
                           href="/petlist/shelter"
                           className={"navi-dropdown"}
                         >
-                          pets
+                          Pets
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="/applicationlist/shelter"

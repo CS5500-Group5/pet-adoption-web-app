@@ -87,7 +87,7 @@ const CartScreen = (props) => {
           <ul>
             <li>
               <h2 className="fw-bold">
-                Confirm and submit your application:
+                Confirm and Submit Your Application:
               </h2>
             </li>
             <li>

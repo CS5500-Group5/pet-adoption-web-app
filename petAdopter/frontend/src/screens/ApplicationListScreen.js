@@ -48,11 +48,11 @@ const ApplicationListScreen = (props) => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>DATE</th>
-              <th>APPLICANT</th>
-              <th>PAID</th>
+              <th>Date Submitted</th>
+              <th>Applicant</th>
+              <th>Paid</th>
               <th>Approved</th>
-              <th>ACTIONS</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
